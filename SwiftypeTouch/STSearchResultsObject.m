@@ -29,6 +29,7 @@
 
 - (void)setSearchResultData:(NSDictionary *)searchResultData {
     _searchResultData = searchResultData;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"collectionViewRefresh" object:nil];
     [self.searchDisplayController.searchResultsTableView reloadData];
 }
 
