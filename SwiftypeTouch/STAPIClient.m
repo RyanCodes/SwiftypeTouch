@@ -216,7 +216,7 @@ const NSInteger STTimeoutErrorCode = 2;
     if (self.query) {
         [requestParams setObject:self.query forKey:@"q"];
     }
-
+    [requestParams setObject:@{@"series": @{@"approved": @"True"}} forKey:@"filters"];
     [requestParams setObject:@(perPage) forKey:@"per_page"];
     [requestParams setObject:@(page) forKey:@"page"];
 
